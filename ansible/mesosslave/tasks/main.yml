@@ -35,14 +35,14 @@
 
 - name: Set Mesos Slave hostname
   copy:
-    content: "{{ansible_eth1.ipv4.address}}"
+    content: "{{ansible_eth0.ipv4.address}}"
     dest: /etc/mesos-slave/hostname
     mode: 0644
   sudo: yes
 
 - name: Set Mesos Slave ip
   copy:
-    content: "{{ansible_eth1.ipv4.address}}"
+    content: "{{ansible_eth0.ipv4.address}}"
     dest: /etc/mesos-slave/ip
     mode: 0644
   sudo: yes

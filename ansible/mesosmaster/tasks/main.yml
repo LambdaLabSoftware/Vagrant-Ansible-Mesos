@@ -28,14 +28,14 @@
 # Tasks for Mesos Master nodes
 - name: Set Mesos Master hostname
   copy:
-    content: "{{ansible_eth1.ipv4.address}}"
+    content: "{{ansible_eth0.ipv4.address}}"
     dest: /etc/mesos-master/hostname
     mode: 0644
   sudo: yes
 
 - name: Set Mesos Master ip
   copy:
-    content: "{{ansible_eth1.ipv4.address}}"
+    content: "{{ansible_eth0.ipv4.address}}"
     dest: /etc/mesos-master/ip
     mode: 0644
   sudo: yes
@@ -60,7 +60,7 @@
 
 - name: set Mesos hostname to marathon conf
   copy:
-    content: "{{ansible_eth1.ipv4.address}}"
+    content: "{{ansible_eth0.ipv4.address}}"
     dest: /etc/mesos-master/hostname
     mode: 0644
   sudo: yes

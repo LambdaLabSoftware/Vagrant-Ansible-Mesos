@@ -1,1 +1,1 @@
-zookeeper_url: {% for host in groups['master_nodes'] %}{{ hostvars[host]['ansible_eth1']['ipv4']['address'] }}{% endfor %}
+zookeeper_url: {% for host in groups['master_nodes'] %}{{ hostvars[host]['ansible_eth0']['ipv4']['address'] }}{% endfor %}
