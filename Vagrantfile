@@ -39,6 +39,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         digital_ocean.image = conf["image"]
         digital_ocean.region = conf["region"]
         digital_ocean.size = "512mb"
+        digital_ocean.private_networking = true
       end
 
       # provision nodes with ansible
